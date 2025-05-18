@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de tienda de compras</title>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Simulador de local de ropa</h1>
-    <script src="main.js"></script>
+  <h1>Simulador de Carrito de Compras</h1>
+
+<h3>Productos disponibles</h3>
+<ul id="lista-productos"></ul>
+
+<form id="form-agregar">
+  <input type="text" id="input-producto" placeholder="Nombre del producto">
+  <button type="submit">Agregar al carrito</button>
+</form>
+
+
+  <h2>Carrito</h2>
+  <ul id="carrito-lista"></ul>
+  <p id="carrito-total"></p>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
