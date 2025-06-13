@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Carrito de Compras</title>
   <link rel="stylesheet" href="css/styles.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
-  <h1>Simulador de Carrito de Compras</h1>
+  <div class="container">
+    <h1>Simulador de Carrito de Compras</h1>
 
-<h3>Productos disponibles</h3>
-<ul id="lista-productos"></ul>
+    <section class="productos">
+      <h2>Productos disponibles</h2>
+      <ul id="lista-productos" class="lista-productos"></ul>
 
-<form id="form-agregar">
-  <input type="text" id="input-producto" placeholder="Nombre del producto">
-  <button type="submit">Agregar al carrito</button>
-</form>
+      <form id="form-agregar" class="formulario">
+        <input type="text" id="input-producto" placeholder="Nombre del producto">
+        <button type="submit">Agregar al carrito</button>
+      </form>
+    </section>
 
-
-  <h2>Carrito</h2>
-  <ul id="carrito-lista"></ul>
-  <p id="carrito-total"></p>
+    <section class="carrito">
+      <h2>Carrito</h2>
+      <ul id="carrito-lista" class="lista-carrito"></ul>
+      <p id="carrito-total" class="total"></p>
+    </section>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
