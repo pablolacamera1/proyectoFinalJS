@@ -1,11 +1,4 @@
-
-const productos = [
-  { nombre: "Camisa", precio: 50000 },
-  { nombre: "Pantalón", precio: 80000 },
-  { nombre: "Zapatillas", precio: 150000 },
-  { nombre: "Gorra", precio: 20000 }
-];
-
+let productos = [];
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const formAgregar = document.getElementById("form-agregar");
@@ -84,5 +77,18 @@ formAgregar.addEventListener("submit", (e) => {
   }
 });
 
-mostrarProductosHTML();
-mostrarResumen();
+
+fetch("productos.json")
+  .then(res => res.json())
+  .then(data => {
+    productos = data;
+    mostrarProductosHTML();
+    mostrarResumen();
+  })
+  .catch(error => {
+    Swal.fire({
+      icon: 'error',
+      title: 'Error al cargar productos',
+      text: error.message
+    });
+  });
